@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6d73c0ea1ce2a774f823d051bacebfb0, type: 2}
-  m_sharedMaterial: {fileID: -7981613914889586046, guid: 6d73c0ea1ce2a774f823d051bacebfb0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9a750e0e327fe5441952edc3d2d24dce, type: 2}
+  m_sharedMaterial: {fileID: 4179265287576223296, guid: 9a750e0e327fe5441952edc3d2d24dce, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -601,6 +601,7 @@ GameObject:
   - component: {fileID: 450942372}
   - component: {fileID: 450942371}
   - component: {fileID: 450942370}
+  - component: {fileID: 450942373}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -671,7 +672,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 450942371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 450942373}
+        m_TargetAssemblyTypeName: MainMenuPlay, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450942371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +723,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450942368}
   m_CullTransparentMesh: 1
+--- !u!114 &450942373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450942368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e7e2d276e30094497eb8ff7e77c99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &520724787
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,8 +887,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6d73c0ea1ce2a774f823d051bacebfb0, type: 2}
-  m_sharedMaterial: {fileID: -7981613914889586046, guid: 6d73c0ea1ce2a774f823d051bacebfb0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9a750e0e327fe5441952edc3d2d24dce, type: 2}
+  m_sharedMaterial: {fileID: 4179265287576223296, guid: 9a750e0e327fe5441952edc3d2d24dce, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1096,8 +1121,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Magnificent ducksuru
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6d73c0ea1ce2a774f823d051bacebfb0, type: 2}
-  m_sharedMaterial: {fileID: -7981613914889586046, guid: 6d73c0ea1ce2a774f823d051bacebfb0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9a750e0e327fe5441952edc3d2d24dce, type: 2}
+  m_sharedMaterial: {fileID: 4179265287576223296, guid: 9a750e0e327fe5441952edc3d2d24dce, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
