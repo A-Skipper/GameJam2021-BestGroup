@@ -7,6 +7,7 @@ public static class SceneLoader
     {
         MainMenu,
         Loading,
+        GameScene,
     }
 
     private static Action onLoaderCallback;
