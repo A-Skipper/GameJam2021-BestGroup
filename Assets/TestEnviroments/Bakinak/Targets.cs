@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Targets : MonoBehaviour
+public class Targets : SoundClass
 {
 
     [SerializeField] UnityEvent manager = default;
 
     ParticleSystem myParticles;
+    public AudioClip mySound;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class Targets : MonoBehaviour
 
         //Do some fancy effects and play a sound or something. Based on the position where the creature hit us.
         myParticles.Play();
-
+        playSound(mySound);
         Destroy(creature.gameObject);
     }
 

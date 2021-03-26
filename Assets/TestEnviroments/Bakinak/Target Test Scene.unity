@@ -249,6 +249,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  mySound: {fileID: 8300000, guid: b811007009cc28e40a4e36d7ae082c1c, type: 3}
 --- !u!199 &60115019
 ParticleSystemRenderer:
   serializedVersion: 6
