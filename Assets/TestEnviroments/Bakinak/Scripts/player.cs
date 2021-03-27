@@ -103,8 +103,7 @@ public class player : MonoBehaviour
         {
             Debug.Log("left");
             //Apply force, should depend on angle too though.
-            creaturesToPropulse1[i].GetComponent<Rigidbody2D>().AddForce(propZoneLeft.up * propulsionStrength, ForceMode2D.Impulse);
-            //creaturesToPropulse1[i].GetComponent<Rigidbody2D>().velocity += new Vector2(0, 100);
+            creaturesToPropulse1[i].GetComponent<Rigidbody2D>().AddForce(propZoneLeft.forward * propulsionStrength, ForceMode2D.Impulse);
 
         }
         //Do for other array as well.
