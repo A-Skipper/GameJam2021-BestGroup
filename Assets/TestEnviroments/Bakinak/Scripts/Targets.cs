@@ -12,11 +12,14 @@ public class Targets : SoundClass
     ParticleSystem myParticles;
     public AudioClip mySound;
     private Monsterspawner monsterspawner;
+    private Timer timer;
+
     // Start is called before the first frame update
     void Start()
     {
         myParticles = GetComponent<ParticleSystem>();
         monsterspawner = GameObject.FindObjectOfType<Monsterspawner>().GetComponent<Monsterspawner>();
+        timer = GameObject.FindObjectOfType<Timer>().GetComponent<Timer>();
     }
 
 
@@ -28,7 +31,7 @@ public class Targets : SoundClass
         playSound(mySound);
         Destroy(creature.transform.parent.gameObject);
         monsterspawner.monsterSpawned--;
-        
+        timer.TimerStart();
 
     }
 
