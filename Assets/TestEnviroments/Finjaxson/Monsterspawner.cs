@@ -6,15 +6,21 @@ public class Monsterspawner : MonoBehaviour
 {
     public Transform[] spawnpoints;
     public GameObject[] monsters;
-    int randomSpawnPoint, randomMonster, monsterSpawned = 0;
-    public int level, spawnRate = 5;
+    int randomSpawnPoint, randomMonster;
+    private int level, spawnRate = 1;
     public static bool spawnAllowed;
-    
+    public int monsterSpawned;
+    private Timer timer;
+    private float time;
+    private bool startet;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         spawnAllowed = true;
         InvokeRepeating("SpawnAMonster", 1f, spawnRate);
+        timer = GameObject.FindObjectOfType<Timer>().GetComponent<Timer>();
         
     }
 
@@ -26,12 +32,31 @@ public class Monsterspawner : MonoBehaviour
             randomSpawnPoint = Random.Range(0, spawnpoints.Length);
             randomMonster = Random.Range(0, monsters.Length);
             Instantiate(monsters[randomMonster], spawnpoints[randomSpawnPoint].position, Quaternion.identity);
-            monsterSpawned = monsterSpawned + 1;
+            monsterSpawned++;
+           
         }
     }
+
     // Update is called once per frame
     void Update()
     {
+        //spawnRate = Random.Range(0, 5);
+        startet = timer.StartTimer;
+        time += Time.deltaTime;
+        if (startet)
+        {
+
+            if (time >= 5)
+            {
+                
+                level = level + 1;
+                time = 0;
+            }
+            
+        }
+
+        
+        
         if (monsterSpawned > level)
         {
             spawnAllowed = false;
@@ -40,5 +65,7 @@ public class Monsterspawner : MonoBehaviour
         {
             spawnAllowed = true;
         }
+
+
     }
 }
