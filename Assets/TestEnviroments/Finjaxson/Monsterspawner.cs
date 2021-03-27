@@ -7,9 +7,12 @@ public class Monsterspawner : MonoBehaviour
     public Transform[] spawnpoints;
     public GameObject[] monsters;
     int randomSpawnPoint, randomMonster;
-    public int level, spawnRate = 5;
+    private int level, spawnRate = 1;
     public static bool spawnAllowed;
     public int monsterSpawned;
+    private Timer timer;
+    private float time;
+    private bool startet;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +20,7 @@ public class Monsterspawner : MonoBehaviour
         
         spawnAllowed = true;
         InvokeRepeating("SpawnAMonster", 1f, spawnRate);
-        
+        timer = GameObject.FindObjectOfType<Timer>().GetComponent<Timer>();
         
     }
 
@@ -37,6 +40,23 @@ public class Monsterspawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //spawnRate = Random.Range(0, 5);
+        startet = timer.StartTimer;
+        time += Time.deltaTime;
+        if (startet)
+        {
+
+            if (time >= 5)
+            {
+                
+                level = level + 1;
+                time = 0;
+            }
+            
+        }
+
+        
+        
         if (monsterSpawned > level)
         {
             spawnAllowed = false;
