@@ -13,7 +13,7 @@ public class ourManager : MonoBehaviour
 
     public void incrementScore(int points)
     {
-        Debug.Log("Increase score, and probably spawn new creature");
+        //Debug.Log("Increase score, and probably spawn new creature");
         displayScore.addScore(points);
     }
 
