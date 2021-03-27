@@ -14,50 +14,71 @@ public class player : MonoBehaviour
 
     Rigidbody2D myrigidbody;
     float force = 1;
-
+    float maxRotationSpeed;
     Collider2D[] creaturesToPropulse1, creaturesToPropulse2;
 
-    public LayerMask creatureLayer;
-    public Transform propZone11, propZone12, propZone21, propZone22;
+    /*public LayerMask creatureLayer;
+    public Transform propZoneLeft, propZoneRight, propZone11, propZone12, propZone21, propZone22;*/
 
-
+    [SerializeField] float propulsionStrength;
     [SerializeField] float slowDownRotation = 0.99f;
     [SerializeField] float slowForce = 1;
     [SerializeField] float fastForce = 2;
-    [SerializeField] float maxRotationSpeed; //Do something with this!
+    [SerializeField] float slowMaxRotationSpeed = 250;
+    [SerializeField] float fastMaxRotationSpeed = 400;
     //[SerializeField] float returnToDefaultSpeedScalar = 1;
 
+    private Jail[] jails;
+    private GameObject rightJail;
+    private GameObject LeftJail;
 
+    private void Awake()
+    {
+        jails = FindObjectsOfType<Jail>();
+        foreach (Jail i in jails)
+        { 
+            if (i.jailDir.ToString() == Jail.JailDir.Left.ToString())
+            {
+                LeftJail = i.gameObject;
+            }
+            else
+            {
+                rightJail = i.gameObject;
+            }
+            i.gameObject.SetActive(false);
+        }
+    }
 
     //Start is called before the first frame update
     void Start()
     {
         myrigidbody = GetComponent<Rigidbody2D>();
+        force = slowForce;
+        maxRotationSpeed = slowMaxRotationSpeed;
     }
     
     // Update is called once per frame
     void Update()
     {
-
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             creaturesToPropulse1 = Physics2D.OverlapAreaAll(propZone11.position, propZone12.position, creatureLayer);
             creaturesToPropulse2 = Physics2D.OverlapAreaAll(propZone21.position, propZone22.position, creatureLayer);
 
             applyPropulsion();
-        }
+        }*/
 
         //Check if boosting? This might be buggy as shit, who knows.
         if (Input.GetKeyDown(KeyCode.LeftShift)){
             force = fastForce;
+            maxRotationSpeed = fastMaxRotationSpeed;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             force = slowForce;
+            maxRotationSpeed = slowMaxRotationSpeed;
         }
-
-
-
 
         if (Input.GetKey(KeyCode.D)){
             if (myrigidbody.angularVelocity > 0)
@@ -66,7 +87,6 @@ public class player : MonoBehaviour
                 myrigidbody.angularVelocity *= -0.5f;
             }
             if (myrigidbody.angularVelocity > maxRotationSpeed * -1) myrigidbody.AddTorque(-force);
-
         }
         else if (Input.GetKey(KeyCode.A))
         {
@@ -75,7 +95,30 @@ public class player : MonoBehaviour
                 myrigidbody.angularVelocity *= -0.5f;
             }
             if (myrigidbody.angularVelocity < maxRotationSpeed) myrigidbody.AddTorque(force);
+        }
 
+        //"Jail"
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (LeftJail.activeSelf == true)
+            {
+                LeftJail.SetActive(false);
+            }
+            else
+            {
+                LeftJail.SetActive(true);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (rightJail.activeSelf == true)
+            {
+                rightJail.SetActive(false);
+            }
+            else
+            {
+                rightJail.SetActive(true);
+            }
         }
 
         else
@@ -90,8 +133,25 @@ public class player : MonoBehaviour
     }
 
 
+    //fuck all this
+    /*
     void applyPropulsion()
     {
+        for(int i = 0; i < creaturesToPropulse1.Length; i++)
+        {
+            Debug.Log("left");
+            //Apply force, should depend on angle too though.
+            creaturesToPropulse1[i].GetComponent<Rigidbody2D>().AddForce(propZoneLeft.forward * propulsionStrength, ForceMode2D.Impulse);
+
+        }
+        //Do for other array as well.
+        for (int i = 0; i < creaturesToPropulse2.Length; i++)
+        {
+            Debug.Log("right");
+            //Apply force, should depend on angle too though.
+            creaturesToPropulse2[i].GetComponent<Rigidbody2D>().AddForce(propZoneRight.forward * propulsionStrength);
+        }
 
     }
+    */
 }
