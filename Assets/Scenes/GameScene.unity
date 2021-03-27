@@ -600,6 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb25121dda4d90644a973f12c435f9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySound: {fileID: 0}
 --- !u!1001 &1546793812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -775,6 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb25121dda4d90644a973f12c435f9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySound: {fileID: 0}
 --- !u!1 &1639209657
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb25121dda4d90644a973f12c435f9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySound: {fileID: 0}
 --- !u!1001 &1726757633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1023,6 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb25121dda4d90644a973f12c435f9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySound: {fileID: 0}
 --- !u!1001 &6179184485644064954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1077,6 +1081,26 @@ PrefabInstance:
     - target: {fileID: 7502481085156323818, guid: c71af39c6dc508348a320214e1758edb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502481086552646700, guid: c71af39c6dc508348a320214e1758edb, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502481086552646700, guid: c71af39c6dc508348a320214e1758edb, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502481086552646700, guid: c71af39c6dc508348a320214e1758edb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502481086552646700, guid: c71af39c6dc508348a320214e1758edb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7502481086552646702, guid: c71af39c6dc508348a320214e1758edb, type: 3}
+      propertyPath: targetType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7502481086552646702, guid: c71af39c6dc508348a320214e1758edb, type: 3}
       propertyPath: manager.m_PersistentCalls.m_Calls.Array.data[0].m_Target
