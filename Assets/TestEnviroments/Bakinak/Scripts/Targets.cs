@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class Targets : SoundClass
 {
-
+    public enum TargetType { Red, blue };
+    public TargetType targetType;
     [SerializeField] UnityEvent manager = default;
 
     ParticleSystem myParticles;
@@ -32,7 +33,17 @@ public class Targets : SoundClass
     {
         if (other.transform.tag == "creature")
         {
-            manager.Invoke();
+            if (targetType.ToString() == other.GetComponent<Creature>().creatureType.ToString())
+            {
+                manager.Invoke();
+                manager.Invoke();
+            }
+            else
+            {
+                manager.Invoke();
+            }
+
+
             creatureHit(other);
         }
     }
