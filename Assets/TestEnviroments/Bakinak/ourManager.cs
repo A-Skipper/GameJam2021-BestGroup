@@ -19,6 +19,6 @@ public class ourManager : MonoBehaviour
 
     public void incrementScore()
     {
-        Debug.Log("Hello there");
+        Debug.Log("Increase score, and probably spawn new creature");
     }
 }
