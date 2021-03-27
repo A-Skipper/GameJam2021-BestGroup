@@ -23,7 +23,7 @@ public class platformmovement : MonoBehaviour
 
 
         if (Input.GetKey(KeyCode.A)) {
-            rb.velocity = 30;
+            //rb.velocity = 30;
             //transform.Rotate(Vector3.forward * speed * Time.deltaTime);
         }
 
