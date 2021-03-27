@@ -21,6 +21,7 @@ public class SoundClass : MonoBehaviour
         GameObject soundObject = new GameObject("Sound");
         AudioSource audioSource = soundObject.AddComponent<AudioSource>();
         audioSource.clip = clip;
+        audioSource.volume = 0.25f;
         soundEffect soundScript = soundObject.AddComponent<soundEffect>();
         Instantiate(soundObject, transform);
     }
