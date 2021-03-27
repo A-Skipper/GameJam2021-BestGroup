@@ -12,6 +12,7 @@ public static class SceneLoader
         MainMenu,
         Loading,
         GameScene,
+        EndScreen,
     }
 
     private static Action onLoaderCallback;
