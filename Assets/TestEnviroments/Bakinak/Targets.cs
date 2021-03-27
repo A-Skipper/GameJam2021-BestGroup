@@ -18,7 +18,7 @@ public class Targets : SoundClass
     }
 
 
-    void creatureHit(Collider creature)
+    void creatureHit(Collider2D creature)
     {
 
         //Do some fancy effects and play a sound or something. Based on the position where the creature hit us.
@@ -28,7 +28,7 @@ public class Targets : SoundClass
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform.tag == "creature")
         {
