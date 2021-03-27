@@ -11,11 +11,12 @@ public class Targets : SoundClass
 
     ParticleSystem myParticles;
     public AudioClip mySound;
-
+    private Monsterspawner monsterspawner;
     // Start is called before the first frame update
     void Start()
     {
         myParticles = GetComponent<ParticleSystem>();
+        monsterspawner = GameObject.FindObjectOfType<Monsterspawner>().GetComponent<Monsterspawner>();
     }
 
 
@@ -25,10 +26,13 @@ public class Targets : SoundClass
         //Do some fancy effects and play a sound or something. Based on the position where the creature hit us.
         myParticles.Play();
         playSound(mySound);
-        Destroy(creature.gameObject);
+        Destroy(creature.transform.parent.gameObject);
+        monsterspawner.monsterSpawned--;
+        
+
     }
 
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform.tag == "creature")
