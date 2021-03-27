@@ -28,7 +28,26 @@ public class player : MonoBehaviour
     [SerializeField] float fastMaxRotationSpeed = 400;
     //[SerializeField] float returnToDefaultSpeedScalar = 1;
 
+    private Jail[] jails;
+    private GameObject rightJail;
+    private GameObject LeftJail;
 
+    private void Awake()
+    {
+        jails = FindObjectsOfType<Jail>();
+        foreach (Jail i in jails)
+        { 
+            if (i.jailDir.ToString() == Jail.JailDir.Left.ToString())
+            {
+                LeftJail = i.gameObject;
+            }
+            else
+            {
+                rightJail = i.gameObject;
+            }
+            i.gameObject.SetActive(false);
+        }
+    }
 
     //Start is called before the first frame update
     void Start()
@@ -61,9 +80,6 @@ public class player : MonoBehaviour
             maxRotationSpeed = slowMaxRotationSpeed;
         }
 
-
-
-
         if (Input.GetKey(KeyCode.D)){
             if (myrigidbody.angularVelocity > 0)
             {
@@ -71,7 +87,6 @@ public class player : MonoBehaviour
                 myrigidbody.angularVelocity *= -0.5f;
             }
             if (myrigidbody.angularVelocity > maxRotationSpeed * -1) myrigidbody.AddTorque(-force);
-
         }
         else if (Input.GetKey(KeyCode.A))
         {
@@ -80,7 +95,30 @@ public class player : MonoBehaviour
                 myrigidbody.angularVelocity *= -0.5f;
             }
             if (myrigidbody.angularVelocity < maxRotationSpeed) myrigidbody.AddTorque(force);
+        }
 
+        //"Jail"
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (LeftJail.activeSelf == true)
+            {
+                LeftJail.SetActive(false);
+            }
+            else
+            {
+                LeftJail.SetActive(true);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (rightJail.activeSelf == true)
+            {
+                rightJail.SetActive(false);
+            }
+            else
+            {
+                rightJail.SetActive(true);
+            }
         }
 
         else
