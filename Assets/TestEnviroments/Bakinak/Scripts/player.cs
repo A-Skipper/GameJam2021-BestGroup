@@ -32,6 +32,8 @@ public class player : MonoBehaviour
     private GameObject rightJail;
     private GameObject LeftJail;
 
+    [SerializeField] private GameObject[] flames;
+
     private void Awake()
     {
         jails = FindObjectsOfType<Jail>();
@@ -60,15 +62,6 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            creaturesToPropulse1 = Physics2D.OverlapAreaAll(propZone11.position, propZone12.position, creatureLayer);
-            creaturesToPropulse2 = Physics2D.OverlapAreaAll(propZone21.position, propZone22.position, creatureLayer);
-
-            applyPropulsion();
-        }*/
-
         //Check if boosting? This might be buggy as shit, who knows.
         if (Input.GetKeyDown(KeyCode.LeftShift)){
             force = fastForce;
@@ -87,6 +80,8 @@ public class player : MonoBehaviour
                 myrigidbody.angularVelocity *= -0.5f;
             }
             if (myrigidbody.angularVelocity > maxRotationSpeed * -1) myrigidbody.AddTorque(-force);
+
+            flames[0].SetActive(true);
         }
         else if (Input.GetKey(KeyCode.A))
         {
@@ -95,7 +90,16 @@ public class player : MonoBehaviour
                 myrigidbody.angularVelocity *= -0.5f;
             }
             if (myrigidbody.angularVelocity < maxRotationSpeed) myrigidbody.AddTorque(force);
+
+            flames[1].SetActive(true);
         }
+        else
+        {
+            flames[0].SetActive(false);
+            flames[1].SetActive(false);
+        }
+
+
 
         //"Jail"
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -121,6 +125,8 @@ public class player : MonoBehaviour
             }
         }
 
+        
+
         else
         {
             //Reset automatically to default position if uncommented
@@ -132,26 +138,4 @@ public class player : MonoBehaviour
         }
     }
 
-
-    //fuck all this
-    /*
-    void applyPropulsion()
-    {
-        for(int i = 0; i < creaturesToPropulse1.Length; i++)
-        {
-            Debug.Log("left");
-            //Apply force, should depend on angle too though.
-            creaturesToPropulse1[i].GetComponent<Rigidbody2D>().AddForce(propZoneLeft.forward * propulsionStrength, ForceMode2D.Impulse);
-
-        }
-        //Do for other array as well.
-        for (int i = 0; i < creaturesToPropulse2.Length; i++)
-        {
-            Debug.Log("right");
-            //Apply force, should depend on angle too though.
-            creaturesToPropulse2[i].GetComponent<Rigidbody2D>().AddForce(propZoneRight.forward * propulsionStrength);
-        }
-
-    }
-    */
 }
