@@ -72,6 +72,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7502481086552646702, guid: c71af39c6dc508348a320214e1758edb, type: 3}
+      propertyPath: WrongSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f2e33f6946797d458f1ec06ec77a315, type: 3}
+    - target: {fileID: 7502481086552646702, guid: c71af39c6dc508348a320214e1758edb, type: 3}
       propertyPath: targetType
       value: 0
       objectReference: {fileID: 0}
@@ -79,6 +83,10 @@ PrefabInstance:
       propertyPath: wrongSound
       value: 
       objectReference: {fileID: 8300000, guid: 7f2e33f6946797d458f1ec06ec77a315, type: 3}
+    - target: {fileID: 7502481086552646702, guid: c71af39c6dc508348a320214e1758edb, type: 3}
+      propertyPath: CorrectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2557e5b3a8843114ba7da3db956bcdcb, type: 3}
     - target: {fileID: 7502481086552646702, guid: c71af39c6dc508348a320214e1758edb, type: 3}
       propertyPath: correctSound
       value: 

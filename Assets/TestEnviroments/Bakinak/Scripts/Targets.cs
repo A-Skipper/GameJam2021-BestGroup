@@ -10,7 +10,8 @@ public class Targets : SoundClass
     [SerializeField] UnityEvent manager = default;
 
     ParticleSystem myParticles;
-    public AudioClip mySound;
+    public AudioClip CorrectSound;
+    public AudioClip WrongSound;
     private Monsterspawner monsterspawner;
     // Start is called before the first frame update
 
@@ -33,7 +34,6 @@ public class Targets : SoundClass
 
         //Do some fancy effects and play a sound or something. Based on the position where the creature hit us.
         myParticles.Play();
-        playSound(mySound);
         Destroy(creature.transform.parent.gameObject);
         monsterspawner.monsterSpawned--;
 
@@ -47,11 +47,13 @@ public class Targets : SoundClass
         {
             if (targetType.ToString() == other.GetComponent<Creature>().creatureType.ToString())
             {
+                playSound(CorrectSound);
                 manager.Invoke();
                 manager.Invoke();
             }
             else
             {
+                playSound(WrongSound);
                 manager.Invoke();
             }
 
