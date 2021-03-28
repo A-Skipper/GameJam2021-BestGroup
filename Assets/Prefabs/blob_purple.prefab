@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac30eb9a7500c184fba7efdb463806e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creatureType: 0
+  creatureType: 1
 --- !u!114 &8876259246453722112
 MonoBehaviour:
   m_ObjectHideFlags: 0
