@@ -21,11 +21,14 @@ public class Targets : SoundClass
     public float fadeSpeed = 5;
     private bool fading = true;
 
+    Timer timer;
+
     void Start()
     {
         myParticles = GetComponent<ParticleSystem>();
         monsterspawner = GameObject.FindObjectOfType<Monsterspawner>().GetComponent<Monsterspawner>();
         currentHitpoint = startHitpoint;
+        timer = GameObject.FindObjectOfType<Timer>().GetComponent<Timer>();
     }
 
 
@@ -36,7 +39,7 @@ public class Targets : SoundClass
         myParticles.Play();
         Destroy(creature.transform.parent.gameObject);
         monsterspawner.monsterSpawned--;
-
+        timer.TimerStart();
         updatehitpoint();
     }
 
@@ -57,7 +60,7 @@ public class Targets : SoundClass
                 manager.Invoke();
             }
 
-
+            
             creatureHit(other);
         }
     }

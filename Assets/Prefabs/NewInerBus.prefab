@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 848290217}
   m_Layer: 0
   m_Name: SpaceShip
-  m_TagString: Untagged
+  m_TagString: ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2753873248666560449}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b497aeab2398c73478b1f38070346e6f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 2753873249416127661}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -892,7 +892,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 2753873249416127659}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f0c8dab0e41e30242a561175203c2e9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 2753873249455549772}
   m_Layer: 0
   m_Name: Open Sprite Shape
-  m_TagString: Untagged
+  m_TagString: ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1077,7 +1077,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 2753873249455549770}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f0c8dab0e41e30242a561175203c2e9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 3428162419562043280}
   m_Layer: 0
   m_Name: NewInerBus
-  m_TagString: Untagged
+  m_TagString: ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,8 +1187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propulsionStrength: 10
   slowDownRotation: 0.99
-  slowForce: 1
-  fastForce: 5
+  slowForce: 4
+  fastForce: 12
   slowMaxRotationSpeed: 200
   fastMaxRotationSpeed: 400
   flames:

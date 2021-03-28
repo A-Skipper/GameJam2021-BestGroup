@@ -94,7 +94,7 @@ PrefabInstance:
     - target: {fileID: 4385517064942773578, guid: 06aa6f0b1cd7b5f4f95ff5bc40b279ff, type: 3}
       propertyPath: WrongSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7f2e33f6946797d458f1ec06ec77a315, type: 3}
+      objectReference: {fileID: 8300000, guid: 1c6d54026bfd12e44b70c8b66fa8dbba, type: 3}
     - target: {fileID: 4385517064942773578, guid: 06aa6f0b1cd7b5f4f95ff5bc40b279ff, type: 3}
       propertyPath: targetType
       value: 1
@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 4385517064942773578, guid: 06aa6f0b1cd7b5f4f95ff5bc40b279ff, type: 3}
       propertyPath: CorrectSound
       value: 
-      objectReference: {fileID: 8300000, guid: 2557e5b3a8843114ba7da3db956bcdcb, type: 3}
+      objectReference: {fileID: 8300000, guid: 58975797e20512449af3d242e354e8ee, type: 3}
     - target: {fileID: 4385517064942773578, guid: 06aa6f0b1cd7b5f4f95ff5bc40b279ff, type: 3}
       propertyPath: correctSound
       value: 
