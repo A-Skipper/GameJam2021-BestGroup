@@ -7,11 +7,18 @@ public class Monsterspawner : MonoBehaviour
     public Transform[] spawnpoints;
     public GameObject[] monsters;
     int randomSpawnPoint, randomMonster;
+
+    public float[] spawnRates;
+    int currentSpawnRate;
+    public float spawnIncreaseFrequency = 20;
+    private float roundTime;
+
     private int level, spawnRate = 1;
     public static bool spawnAllowed;
     public int monsterSpawned;
     private Timer timer;
     private float time;
+
     private bool startet;
 
     // Start is called before the first frame update
@@ -19,7 +26,7 @@ public class Monsterspawner : MonoBehaviour
     {
         
         spawnAllowed = true;
-        InvokeRepeating("SpawnAMonster", 1f, spawnRate);
+        InvokeRepeating("SpawnAMonster", 1f, spawnRates[currentSpawnRate]);
         timer = GameObject.FindObjectOfType<Timer>().GetComponent<Timer>();
         
     }
@@ -43,10 +50,11 @@ public class Monsterspawner : MonoBehaviour
         //spawnRate = Random.Range(0, 5);
         startet = timer.StartTimer;
         time += Time.deltaTime;
+        roundTime += Time.deltaTime;
         if (startet)
         {
 
-            if (time >= 5)
+            if (time >= 10)
             {
                 
                 level = level + 1;
@@ -66,6 +74,14 @@ public class Monsterspawner : MonoBehaviour
             spawnAllowed = true;
         }
 
+
+        if(roundTime >= spawnIncreaseFrequency)
+        {
+            CancelInvoke();
+            roundTime = 0;
+            if(currentSpawnRate < spawnRates.Length-1) currentSpawnRate += 1;
+            InvokeRepeating("SpawnAMonster", 1f, spawnRates[currentSpawnRate]);
+        }
 
     }
 }
