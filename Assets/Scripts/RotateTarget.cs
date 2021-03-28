@@ -17,6 +17,6 @@ public class RotateTarget : MonoBehaviour
     {
         
 
-        transform.eulerAngles += new Vector3(0, 0, rotateFactor);
+        transform.eulerAngles += new Vector3(0, 0, rotateFactor * Time.deltaTime);
     }
 }

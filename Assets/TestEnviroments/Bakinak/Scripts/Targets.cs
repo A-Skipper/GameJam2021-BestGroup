@@ -82,17 +82,17 @@ public class Targets : SoundClass
 
     IEnumerator fadeOut()
     {
-        while(this.GetComponent<SpriteRenderer>().color.a > 0)
+        while(this.transform.parent.GetComponentInChildren<SpriteRenderer>().color.a > 0)
         {
-            Color objectColor = this.GetComponent<SpriteRenderer>().color;
+            Color objectColor = this.transform.parent.GetComponentInChildren<SpriteRenderer>().color;
             float fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
 
             objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-            this.GetComponent<SpriteRenderer>().color = objectColor;
-            if (this.GetComponent<SpriteRenderer>().color.a <= 0)
+            this.transform.parent.GetComponentInChildren<SpriteRenderer>().color = objectColor;
+            if(this.transform.parent.GetComponentInChildren<SpriteRenderer>().color.a <= 0)
             {
                 GetComponent<BoxCollider2D>().enabled = false;
-                GetComponent<SpriteRenderer>().enabled = false;
+                this.transform.parent.GetComponentInChildren<SpriteRenderer>().enabled = false;
                 StartCoroutine(ExecuteAfterTime(respawnTime));
             }
             yield return null;
@@ -103,13 +103,13 @@ public class Targets : SoundClass
 
     IEnumerator fadeIn()
     {
-        while (this.GetComponent<SpriteRenderer>().color.a < 1)
+        while (this.transform.parent.GetComponentInChildren<SpriteRenderer>().color.a < 1)
         {
-            Color objectColor = this.GetComponent<SpriteRenderer>().color;
+            Color objectColor = this.transform.parent.GetComponentInChildren<SpriteRenderer>().color;
             float fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
 
             objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
-            this.GetComponent<SpriteRenderer>().color = objectColor;
+            this.transform.parent.GetComponentInChildren<SpriteRenderer>().color = objectColor;
             yield return null;
         }
     }
@@ -121,7 +121,7 @@ public class Targets : SoundClass
         // Code to execute after the delay
         currentHitpoint = startHitpoint;
         GetComponent<BoxCollider2D>().enabled = true;
-        GetComponent<SpriteRenderer>().enabled = true;
+        this.transform.parent.GetComponentInChildren<SpriteRenderer>().enabled = true;
         fading = true;
 
     }

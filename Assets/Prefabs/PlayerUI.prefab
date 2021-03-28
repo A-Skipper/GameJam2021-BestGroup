@@ -427,6 +427,7 @@ MonoBehaviour:
   timertext: {fileID: 7486568199934804729}
   timer: 0
   StartTimer: 0
+  MaxTime: 180
 --- !u!1 &6464917144890394265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,3 +1989,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ae96851359b934daf09f8f1c0fe791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreNumber: 0

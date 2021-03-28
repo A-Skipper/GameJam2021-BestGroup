@@ -22,7 +22,10 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if (StartTimer)
+        {
             timer += Time.deltaTime;
+        }
+            
 
         string minutes = ((int)timer / 60).ToString();
         string seconds = ((int)timer % 60).ToString();
