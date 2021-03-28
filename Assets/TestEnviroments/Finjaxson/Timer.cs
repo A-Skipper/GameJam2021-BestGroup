@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
 
     private int score;
 
-    [SerializeField] float MaxTime = 60;
+    [SerializeField] float MaxTime = 180;
 
     public void TimerStart()
     {
