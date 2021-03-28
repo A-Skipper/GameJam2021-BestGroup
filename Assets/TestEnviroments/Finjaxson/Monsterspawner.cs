@@ -13,7 +13,7 @@ public class Monsterspawner : MonoBehaviour
     public float spawnIncreaseFrequency = 20;
     private float roundTime;
 
-    private int level, spawnRate = 1;
+    private int level;
     public static bool spawnAllowed;
     public int monsterSpawned;
     private Timer timer;
