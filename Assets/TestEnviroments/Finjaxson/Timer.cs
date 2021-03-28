@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     public float timer;
     public bool StartTimer;
 
+    private int score;
+
     [SerializeField] float MaxTime = 60;
 
     public void TimerStart()
@@ -36,6 +38,8 @@ public class Timer : MonoBehaviour
     public void GoToEndScene()
     {
         //Debug.Log("Hit play");
+        score = FindObjectOfType<DisplayScore>().GetComponent<DisplayScore>().scoreNumber;
+        EndScore.Instance.score = score;
         SceneLoader.Load(SceneLoader.Scene.EndScreen);
     }
 }

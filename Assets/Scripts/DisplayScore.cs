@@ -5,7 +5,7 @@ public class DisplayScore : MonoBehaviour
 {
     private TMP_Text scoreText;
 
-    private int scoreNumber;
+    public int scoreNumber;
     private void Awake()
     {
         scoreText = GetComponent<TMP_Text>();
