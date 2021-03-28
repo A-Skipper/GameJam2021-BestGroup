@@ -396,97 +396,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5091389249969347814, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6216133455975875196, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6216133455975875196, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6216133455975875196, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6216133455975875196, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8397436488713927462, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8397436488713927462, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -125
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643396150272956557, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643396150272956557, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643396150272956557, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643396150272956557, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539463549120, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539463549120, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539463549120, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539463549120, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539613114549, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539613114549, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539613114549, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030539613114549, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+    - target: {fileID: 1478434381, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
+      propertyPath: m_text
+      value: "Rotate the space bus using \n\nA   and   D\n\nHold shift to rotate
+        faster.\n\nTo lock left and right side, use\n\nLeft Arrow and \nRight Arrow"
       objectReference: {fileID: 0}
     - target: {fileID: 9120030540481971497, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
       propertyPath: m_Name
       value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030540481971499, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030540481971499, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120030540481971499, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 9120030540481971501, guid: b68c1cd16d8a9cc46a51542787dcb57b, type: 3}
       propertyPath: m_Pivot.x

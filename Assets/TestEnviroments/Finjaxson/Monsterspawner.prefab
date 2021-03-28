@@ -204,5 +204,11 @@ MonoBehaviour:
   - {fileID: 4137618570474383414}
   - {fileID: 3255577660416229865}
   monsters: []
-  level: 0
-  spawnRate: 5
+  spawnRates:
+  - 7
+  - 6
+  - 5
+  - 4
+  - 3
+  spawnIncreaseFrequency: 20
+  monsterSpawned: 0
